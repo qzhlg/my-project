@@ -3,6 +3,7 @@
         <H1>{{msg}}</H1>
         <button @click="addMethod">点击</button>
         <p>this number will {{count}}</p>
+        <button @click="go_newPage">组件通信</button>
     </div>
 </template>
 <script>
@@ -18,6 +19,11 @@ export default Vue.extend({
     methods:{
         addMethod(){
             this.count += 1
+        },
+        go_newPage(){
+            this.$router.push({
+                path:'/cmptComuncation'
+            })
         }
     }
  
